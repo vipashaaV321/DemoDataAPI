@@ -1,6 +1,7 @@
 {
   "name": "demodata",
   "version": "1.0.0",
+  "start": "node index.js",
   "description": "",
   "main": "index.js",
   "scripts": {
