@@ -3,7 +3,7 @@ const bodyparser=require("body-parser");
 const cors=require("cors");
 const nodemailer = require("nodemailer");
 const db=require('./query');
-
+const path = require('path');
 const app=express();
 // const port=3333;
 const port = process.env.PORT || 3333;
@@ -16,37 +16,7 @@ app.use(
         extended:true,
     })
 );
-// define a sendmail endpoint, which will send emails and response with the corresponding status
-// app.post("/sendmail", (req, res) => {
-//     console.log("request came");
-//     let user = req.body;
-//     sendMail(user, (err, info) => {
-//       if (err) {
-//         console.log(err);
-//         res.status(400);
-//         res.send({ error: "Failed to send email" });
-//       } else {
-//         console.log("Email has been sent");
-//         res.send(info);
-//       }
-//     });
-//   });
-  app.post('/sendmail',db.sendMail);
-// define a sendmail endpoint, which will send emails and response with the corresponding status
-// app.post("/sendmail", (req, res) => {
-//     console.log("request came");
-//     let user = req.body;
-//     sendMail(user, (err, info) => {
-//       if (err) {
-//         console.log(err);
-//         res.status(400);
-//         res.send({ error: "Failed to send email" });
-//       } else {
-//         console.log("Email has been sent");
-//         res.send(info);
-//       }
-//     });
-//   });
+
 app.post('/addsignup',db.addsignup);
 app.post('/addbusiness',db.addbusiness);
 app.get('/getsignup',db.getsignup);
