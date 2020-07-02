@@ -203,6 +203,7 @@ module.exports = {
     addbusiness,
     getbusinessbyid,
     deletebusiness,
-    updatebusiness
+    updatebusiness,
+    
    
 }
