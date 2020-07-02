@@ -4,7 +4,7 @@ const cors=require("cors");
 const nodemailer = require("nodemailer");
 const db=require('./query');
 const path = require('path');
-var cors = require('cors');
+
 const app=express();
 // const port=3333;
 const port = process.env.PORT || 3333;
